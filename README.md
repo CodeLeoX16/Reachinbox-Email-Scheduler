@@ -55,7 +55,7 @@ It is built with scalability, reliability, and fault tolerance in mind.
 ReachInbox follows a distributed architecture that separates the frontend, backend APIs, background workers, persistence layer, and external integrations.
 
 <p align="center">
-  <img src="docs/images/reachinbox-architecture.png" alt="ReachInbox System Architecture" width="100%" />
+  <img src="ReachInbox Email Scheduler Architecture.png" alt="ReachInbox System Architecture" width="100%" />
 </p>
 
 ### Architecture Components
