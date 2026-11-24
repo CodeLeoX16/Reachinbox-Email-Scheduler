@@ -448,7 +448,7 @@ B.Tech – Computer Science & Engineering (Data Science)
 <p>
   <a href="https://github.com/CodeLeoX16">GitHub</a> •
   <a href="https://www.linkedin.com/in/somnath-bhunia-3b300b328/">LinkedIn</a> •
-  <a href="https://codeleox16-somnath.netlify.app/">Portfolio</a>
+  <a href="[https://codeleox16-somnath.netlify.app/](https://codeleox16somnath.netlify.app/)">Portfolio</a>
 </p>
 
 ---
