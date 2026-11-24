@@ -5,8 +5,11 @@ import { prisma } from '../config/database';
 type EmailWithSender = EmailJob & { sender: Sender };
 
 export async function indexEmailDocument(email: EmailWithSender) {
+  const client = esClient;
+  if (!client) return;
+
   try {
-    await esClient.index({
+    await client.index({
       index: EMAIL_INDEX,
       id: email.id,
       document: {
@@ -33,6 +36,9 @@ export async function searchEmailsInES(
   query: string,
   statusFilter?: 'SCHEDULED' | 'SENT' | 'FAILED'
 ): Promise<string[] | null> {
+  const client = esClient;
+  if (!client) return null;
+
   try {
     const mustClauses: any[] = [
       { term: { userId } },
@@ -53,7 +59,7 @@ export async function searchEmailsInES(
       mustClauses.push({ term: { status: 'FAILED' } });
     }
 
-    const result = await esClient.search({
+    const result = await client.search({
       index: EMAIL_INDEX,
       size: 100,
       query: {
